@@ -1,0 +1,75 @@
+@import './app.scss';
+
+// font related stuff
+.rubik-ds {
+  font-family: "Rubik DS", "Rubik", "Outfit", "Roboto", ui-sans-serif, system-ui, sans-serif;
+}
+
+// classes
+.page-bg {
+  background-color: $light-navy;
+  color: $text-col-on-bg;
+}
+
+.navy-card {
+  z-index: 2;
+  background: var(--navy-on-dark);
+  box-shadow: 0 10px 10px -10px var(--navy-shadow);
+  border: 1px solid transparent;
+
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  color: var(--text-col-on-bg);
+
+  height: 100%;
+}
+
+.container-div {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-paragraph {
+
+}
+
+//.custom-site-link{
+//  font-family: "Fira Code", monospace;
+//  font-optical-sizing: auto;
+//  font-style: normal;
+//  color: var(--primary-text-custom);
+//  background: var(--bg-teal);
+//}
+
+.custom-site-link{
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  //color: var(--primary-text-custom);
+  color: blue;
+
+  text-decoration: underline;
+  //text-decoration-color: var(--primary-text-custom);
+  text-decoration-color: blue;
+  text-underline-offset: 3px;
+}
+.custom-site-link:hover{
+  cursor: pointer;
+}
+
+
+.fira-code-button {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--text-col-on-bg);
+}
+.fira-code-button:hover{
+  color: var(--primary-text-custom);
+}

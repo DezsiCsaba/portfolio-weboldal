@@ -1,0 +1,20 @@
+@import './app.scss';
+
+$primary-bg-gradient: linear-gradient(90deg, var(--q-primary) 15%, #0140988a);
+$light-bg-gradient: linear-gradient(90deg, #014198fe 15%, #0140988a);
+$dark-bg-gradient: linear-gradient(90deg, var(--navy-shadow) 15%, var(--navy-dark));
+
+.primary-bg-gradient {
+  background: $primary-bg-gradient
+}
+
+.dark-bg-gradient {
+  background: linear-gradient(90deg, var(--navy-shadow) 15%, var(--navy-dark));
+}
+
+.light-bg-gradient {
+  background: $light-bg-gradient
+}
+
+
+

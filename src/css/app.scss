@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Outfit:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Rubik', 'Outfit', 'Roboto', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;  /* smooth anchor jumps */
+    //overflow-x: hidden;       /* no horizontal scroll */
+}
+
+:root{
+    --light-navy: #112240;
+    --light-navy-on-dark: rgba(14, 34, 64, .8);
+    --light-navy-on-dark-strong: rgba(14, 34, 64, .97);
+    --navy-dark: rgb(15,23,42);
+    --navy-on-dark: rgba(15,23,42,.5);
+    --navy-on-dark-strong: rgba(15,23,42);
+    --navy-on-dark-hover: rgba(17, 34, 67, .2);
+    --navy-shadow: rgba(2,12,27,0.7);
+    --bg-teal: rgba(45,212,191,.1);
+
+    --text-col-on-bg: rgb(148, 163, 184);
+
+    --primary-text-custom: #2DD4BFFF;
+
+    --border-radius: 4px;
+
+    --font-size-small: 18px;
+}
+
+// SCSS Variables
+$light-navy: var(--light-navy);
+$light-navy-on-dark: var(--light-navy-on-dark);
+$navy-dark: var(--navy-dark);
+$navy-on-dark: var(--navy-on-dark);
+$navy-on-dark-strong: var(--navy-on-dark-strong);
+$navy-on-dark-hover: var(--navy-on-dark-hover);
+$navy-shadow: var(--navy-shadow);
+$bg-teal: var(--bg-teal);
+$text-col-on-bg: var(--text-col-on-bg);
+$primary-text-custom: var(--primary-text-custom);
+$border-radius: var(--border-radius);
+$font-size-small: var(--font-size-small);
+
+
+/* app global css */
