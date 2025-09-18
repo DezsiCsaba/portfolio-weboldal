@@ -2,6 +2,8 @@
 
 body {
     font-family: 'Rubik', 'Outfit', 'Roboto', sans-serif;
+    font-size: 22.5px;
+    color: dimgray;
 }
 
 html, body {
@@ -9,37 +11,47 @@ html, body {
     //overflow-x: hidden;       /* no horizontal scroll */
 }
 
-:root{
-    --light-navy: #112240;
-    --light-navy-on-dark: rgba(14, 34, 64, .8);
-    --light-navy-on-dark-strong: rgba(14, 34, 64, .97);
-    --navy-dark: rgb(15,23,42);
-    --navy-on-dark: rgba(15,23,42,.5);
-    --navy-on-dark-strong: rgba(15,23,42);
-    --navy-on-dark-hover: rgba(17, 34, 67, .2);
-    --navy-shadow: rgba(2,12,27,0.7);
-    --bg-teal: rgba(45,212,191,.1);
+.q-page-container {
+    padding-top: 0 !important;
+}
 
-    --text-col-on-bg: rgb(148, 163, 184);
+:root {
+    /* Main tones */
+    --light-wood: #A0522D;
+    --light-wood-on-dark: rgba(160, 82, 45, 0.8);
+    --light-wood-on-dark-strong: rgba(160, 82, 45, 0.97);
 
-    --primary-text-custom: #2DD4BFFF;
+    --wood-dark: #2E1A0F;
+    --wood-on-dark: rgba(46, 26, 15, 0.5);
+    --wood-on-dark-strong: rgba(46, 26, 15, 1);
+    --wood-on-dark-hover: rgba(160, 82, 45, 0.2);
+    --wood-shadow: rgba(46, 26, 15, 0.7);
 
+    /* Accents & background highlights */
+    --bg-orange: rgb(255, 140, 66);
+    --text-col-on-bg: rgb(148, 115, 82);
+
+    --primary-text-custom: #FF8C42FF;
+
+    /* Other settings */
     --border-radius: 4px;
-
     --font-size-small: 18px;
 }
 
-// SCSS Variables
-$light-navy: var(--light-navy);
-$light-navy-on-dark: var(--light-navy-on-dark);
-$navy-dark: var(--navy-dark);
-$navy-on-dark: var(--navy-on-dark);
-$navy-on-dark-strong: var(--navy-on-dark-strong);
-$navy-on-dark-hover: var(--navy-on-dark-hover);
-$navy-shadow: var(--navy-shadow);
-$bg-teal: var(--bg-teal);
+$light-wood: var(--light-wood);
+$light-wood-on-dark: var(--light-wood-on-dark);
+$light-wood-on-dark-strong: var(--light-wood-on-dark-strong);
+
+$wood-dark: var(--wood-dark);
+$wood-on-dark: var(--wood-on-dark);
+$wood-on-dark-strong: var(--wood-on-dark-strong);
+$wood-on-dark-hover: var(--wood-on-dark-hover);
+$wood-shadow: var(--wood-shadow);
+
+$bg-orange: var(--bg-orange);
 $text-col-on-bg: var(--text-col-on-bg);
 $primary-text-custom: var(--primary-text-custom);
+
 $border-radius: var(--border-radius);
 $font-size-small: var(--font-size-small);
 

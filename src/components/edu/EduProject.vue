@@ -6,7 +6,7 @@
           class="project-card-header"
           :style="headerStyle"
         >
-          <div class="img-overlay"/>
+          <div class="img-overlay primary-bg-gradient-strong" style="z-index: 1"/>
         </div>
 
         <div style="height: 60%" class="flex-spacing q-px-md q-pb-md">
@@ -86,16 +86,6 @@ const takeToProject = () => {
   grid-area: 1 / 6 / 2 / 1;
 }
 
-.img-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: $dark-bg-gradient;
-}
-
 .flex-spacing {
   display: flex;
   flex-direction: column;
@@ -139,9 +129,7 @@ const takeToProject = () => {
 
   z-index: 10;
   grid-area: 1 / 4 / -1 / -1;
-  background: $dark-bg-gradient;
-  //box-shadow: 0 10px 10px -10px var(--navy-shadow);
-  //border: 1px solid transparent;
+  background: $dark-bg-gradient-strong;
   border-radius: var(--border-radius);
 }
 </style>

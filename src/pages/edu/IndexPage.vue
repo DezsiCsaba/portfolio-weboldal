@@ -4,36 +4,45 @@
       title="Tanulmányaim"
       subtitle="Gimnáziumi évek és egyetemi projektjeim"
       icon="school"
-      img-src="imgs/workstation.webp"
+      img-src="imgs/workstation.jpg"
     />
 
     <div class="q-pa-xl flex flex-center">
-      <HorizontalContainerWithImg
-        title="Egyetem"
-        image-src="imgs/illustrations/undraw_wip.svg"
-      >
-        <template v-slot:default>
-          <EduTemplate
-            institute="Óbudai Egyetem, Neumann János Informatikai kar"
-            insitute-url="https://nik.uni-obuda.hu"
-            :datas="oeDatas"
-            :projects="projects"
-          />
-        </template>
-      </HorizontalContainerWithImg>
+      <EduTemplate
+        institute="Óbudai Egyetem, Neumann János Informatikai kar"
+        insitute-url="https://nik.uni-obuda.hu"
+        :datas="oeDatas"
+        :projects="projects"
+      />
 
-      <HorizontalContainerWithImg
-        title="Gimnázium"
-        image-src="imgs/illustrations/undraw_study.svg"
-      >
-        <template v-slot:default>
-          <EduTemplate
-            institute="Budapest XIII. kerületi Ady Endre 6 osztályos gimnázium"
-            insitute-url="https://www.adygimnazium.eu"
-            :datas="gimiDatas"
-          />
-        </template>
-      </HorizontalContainerWithImg>
+<!--      <HorizontalContainerWithImg-->
+<!--        title="Egyetem"-->
+<!--        image-src="imgs/illustrations/undraw_wip.svg"-->
+<!--      >-->
+<!--        <template v-slot:default>-->
+<!--          <EduTemplate-->
+<!--            institute="Óbudai Egyetem, Neumann János Informatikai kar"-->
+<!--            insitute-url="https://nik.uni-obuda.hu"-->
+<!--            :datas="oeDatas"-->
+<!--            :projects="projects"-->
+<!--          />-->
+<!--        </template>-->
+<!--      </HorizontalContainerWithImg>-->
+
+
+
+<!--      <HorizontalContainerWithImg-->
+<!--        title="Gimnázium"-->
+<!--        image-src="imgs/illustrations/undraw_study.svg"-->
+<!--      >-->
+<!--        <template v-slot:default>-->
+<!--          <EduTemplate-->
+<!--            institute="Budapest XIII. kerületi Ady Endre 6 osztályos gimnázium"-->
+<!--            insitute-url="https://www.adygimnazium.eu"-->
+<!--            :datas="gimiDatas"-->
+<!--          />-->
+<!--        </template>-->
+<!--      </HorizontalContainerWithImg>-->
     </div>
 
 
@@ -41,9 +50,8 @@
 </template>
 
 <script setup>
-import PageHeader from "components/PageHeader.vue";
-import EduTemplate from "pages/edu/EduTemplate.vue";
-import HorizontalContainerWithImg from "components/HorizontalContainerWithImg.vue";
+import PageHeader from "components/layout/PageHeader.vue";
+import EduTemplate from "components/edu/EduTemplate.vue";
 
 const oeDatas = {
   'Alap ismeretek': [
@@ -80,25 +88,25 @@ const projects = [
     techs: ['Python', 'JavaScript', 'Vue', 'Quasar'],
   }, {
     title: 'Projektmunka',
-    img: 'imgs/workstation.webp',
+    img: 'imgs/workstation.jpg',
     description: 'Nyomtatott és írott szövegek LaTex formátumba való kovertálása',
     roles:['Back-End Fejlesztő', 'Data Engineer', 'Machine Learning Engineer', 'Szoftver Fejlesztő'],
     techs:['Python', 'PyTorch', 'Pandas', 'C#', 'maui', 'cv2'],
   }
 ]
 
-const gimiDatas = {
-  'Nyelvi tanulmányok': [
-    'C1-es komplex angol nyelvvizsga',
-    'Emelt szintű angol nyelvvizsga'
-  ],
-  'Informatika': [
-    'Programozói fakultatív órákra jártam 11. és 12. osztályban',
-    'Emelt szintű informatika érettségit tettem tanulmányaim végén',
-
-    'Ezekben az években kezdte igazán felkelteni az érdeklődésemet az informatika világa.\n' +
-    ' Az érettségi évében már a programozás került a középpontba. Ekkorra ismerkedtem meg a Python és a C# nyelvekkel,\n' +
-    ' és biztosan tudtam, hogy ez az irány az, ami igazán vonz'
-  ]
-}
+// const gimiDatas = {
+//   'Nyelvi tanulmányok': [
+//     'C1-es komplex angol nyelvvizsga',
+//     'Emelt szintű angol nyelvvizsga'
+//   ],
+//   'Informatika': [
+//     'Programozói fakultatív órákra jártam 11. és 12. osztályban',
+//     'Emelt szintű informatika érettségit tettem tanulmányaim végén',
+//
+//     'Ezekben az években kezdte igazán felkelteni az érdeklődésemet az informatika világa.\n' +
+//     ' Az érettségi évében már a programozás került a középpontba. Ekkorra ismerkedtem meg a Python és a C# nyelvekkel,\n' +
+//     ' és biztosan tudtam, hogy ez az irány az, ami igazán vonz'
+//   ]
+// }
 </script>

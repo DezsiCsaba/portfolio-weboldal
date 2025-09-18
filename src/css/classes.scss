@@ -1,13 +1,19 @@
 @import './app.scss';
+@import './quasar-variables';
+@import './styling';
 
 // font related stuff
 .rubik-ds {
   font-family: "Rubik DS", "Rubik", "Outfit", "Roboto", ui-sans-serif, system-ui, sans-serif;
 }
 
+.text-h1-2 {
+  font-size: 67.5px;
+}
+
 // classes
 .page-bg {
-  background-color: $light-navy;
+  background-color: antiquewhite;
   color: $text-col-on-bg;
 }
 
@@ -72,4 +78,14 @@
 }
 .fira-code-button:hover{
   color: var(--primary-text-custom);
+}
+
+.img-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  //background: $primary-bg-gradient;
 }

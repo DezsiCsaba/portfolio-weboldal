@@ -4,7 +4,7 @@
     style="font-size: 16px"
     :style="bgStyle"
   >
-    <div class="img-overlay"/>
+    <div class="img-overlay dark-bg-gradient-strong"/>
 
     <div class="footer-container">
       <div class="inner-footer-container inner-left">
@@ -24,7 +24,7 @@
 
 <script setup>
 import {computed} from "vue";
-import ContactMe from "components/ContactMe.vue";
+import ContactMe from "components/layout/ContactMe.vue";
 
 defineOptions({name: 'CustomFooter'})
 
@@ -40,11 +40,12 @@ const bgStyle = computed(() => ({
 </script>
 
 <style lang="scss" scoped>
-@import '../css/styling';
+@import '../../css/styling';
+@import '../../css/classes';
 
 .custom-footer {
   width: 100%;
-  height: 45vh;
+  height: 40vh;
 }
 
 .custom-footer::after {
@@ -59,17 +60,21 @@ const bgStyle = computed(() => ({
   /* top edge curve */
   border-bottom-left-radius: 50% 60px;
   border-bottom-right-radius: 50% 60px;
-  z-index: 2;
+  z-index: 10;
 }
 
-.img-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: $primary-bg-gradient//$light-bg-gradient;
+//.img-overlay {
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  height: 100%;
+//  width: 100%;
+//  z-index: 1;
+//  background: $primary-bg-gradient//$light-bg-gradient;
+//}
+
+.gradient {
+  background: $primary-bg-gradient
 }
 
 .footer-container {
