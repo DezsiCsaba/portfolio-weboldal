@@ -14,7 +14,7 @@
     </svg>
 
     <div class="header-content q-pl-xl">
-      <div class="header-inner-content">
+      <div class="header-inner-content header-inner-content-l">
         <div class="text-h1-2">
           <q-icon :name="conf.icon"/> {{conf.title}}
         </div>
@@ -22,8 +22,11 @@
         <div>{{conf.subtitle}}</div>
       </div>
 
-      <div class="header-inner-content">
-        <img :src="conf.secondaryImgSrc" alt="nope"/>
+      <div class="header-inner-content header-inner-content-r">
+        <img
+          style="max-height: 80%; max-width: 60%;"
+          :src="conf.secondaryImgSrc" alt="nope"
+        />
       </div>
     </div>
 
@@ -98,4 +101,17 @@ const wavePath = computed(() => generatePath({
   justify-content: space-between;
   padding: 5vw;
 }
+
+.header-inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-inner-content-l {
+  align-items: flex-start;
+}
+.header-inner-content-r {
+  align-items: center;
+}
+
 </style>

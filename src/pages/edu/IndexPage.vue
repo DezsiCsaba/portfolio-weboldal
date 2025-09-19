@@ -14,35 +14,6 @@
         :datas="oeDatas"
         :projects="projects"
       />
-
-<!--      <HorizontalContainerWithImg-->
-<!--        title="Egyetem"-->
-<!--        image-src="imgs/illustrations/undraw_wip.svg"-->
-<!--      >-->
-<!--        <template v-slot:default>-->
-<!--          <EduTemplate-->
-<!--            institute="Óbudai Egyetem, Neumann János Informatikai kar"-->
-<!--            insitute-url="https://nik.uni-obuda.hu"-->
-<!--            :datas="oeDatas"-->
-<!--            :projects="projects"-->
-<!--          />-->
-<!--        </template>-->
-<!--      </HorizontalContainerWithImg>-->
-
-
-
-<!--      <HorizontalContainerWithImg-->
-<!--        title="Gimnázium"-->
-<!--        image-src="imgs/illustrations/undraw_study.svg"-->
-<!--      >-->
-<!--        <template v-slot:default>-->
-<!--          <EduTemplate-->
-<!--            institute="Budapest XIII. kerületi Ady Endre 6 osztályos gimnázium"-->
-<!--            insitute-url="https://www.adygimnazium.eu"-->
-<!--            :datas="gimiDatas"-->
-<!--          />-->
-<!--        </template>-->
-<!--      </HorizontalContainerWithImg>-->
     </div>
 
 

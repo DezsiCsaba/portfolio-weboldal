@@ -1,7 +1,7 @@
 <template>
   <div class="fullscreen q-pa-md flex flex-center column">
     <img
-      src="imgs/illustrations/undraw_not_found_asd.svg"
+      src="imgs/illustrations/undraw_not_found.svg"
       alt=". . ."
       class="w-200 q-mb-xl"
     />
@@ -16,7 +16,7 @@
     <q-btn
       class="q-mt-xl"
       color="white"
-      text-color="blue"
+      text-color="primary"
       outline
       to="/about"
       label="Haza.."
