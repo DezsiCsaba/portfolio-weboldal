@@ -70,6 +70,6 @@ export function hideProfileHeader() {
   globalStore.$state.showProfileNameInHeader = false
 }
 
-export function formatDate(date = new Date(), format = 'YYYY-MMM-DD') {
+export function formatDate(date = new Date(), format = 'YYYY-MMM') {
   return dayjs(date).format(format)
 }

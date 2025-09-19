@@ -27,29 +27,12 @@
 </template>
 
 <script setup>
-import {formatDate} from "../../utils/functions.js";
-import {reactive, watchEffect} from "vue";
+import {reactive} from "vue";
 
 const props = defineProps(['commit'])
 
-const conf = reactive({...props.commit})
+const conf = reactive({...props.commit}) // ha bár a watchEffect kikerült a parent componensbe, ezt így hagyom
 
-const generateCommitHash = () => {
-  const chars = '0123456789abcdef'
-  let hash = ''
-  for (let i = 0; i < 7; i++) {
-    hash += chars[Math.floor(Math.random() * chars.length)]
-  }
-  return hash
-}
-
-watchEffect(() => {
-  Object.assign(conf, {
-    ...conf,
-    displayDate: formatDate(conf.date),
-    id: generateCommitHash(),
-  })
-})
 
 </script>
 
