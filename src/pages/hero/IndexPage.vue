@@ -29,7 +29,7 @@
           >
             <template v-slot:append>
               <q-icon
-                :color="isPwdToggled ? 'blue' : 'gray'"
+                :color="isPwdToggled ? 'primary' : 'gray'"
                 :name="isPwdToggled ? 'visibility_off' : 'visibility'"
                 class="cursor-pointer"
                 @click="isPwdToggled = !isPwdToggled"
@@ -43,7 +43,7 @@
             ref="loginBtn"
             class="full-width"
             :disable="isPwdToggled"
-            color="blue"
+            color="primary"
           >Bejelentkezés</q-btn>
         </q-card-section>
       </q-card>
@@ -54,19 +54,19 @@
 <script setup>
 import {computed, onMounted, ref} from "vue";
 import {autoType, sleep} from "src/utils/functions.js";
-// import {useRouter} from "vue-router";
+import {useRouter} from "vue-router";
 
 const uname = ref('')
 const pword = ref('')
 const isPwdToggled = ref(true)
 const loginBtn = ref(null)
 
-// const router = useRouter()
+const router = useRouter()
 
 const handleFakeBtnClick = () => {
   loginBtn.value.$el.click()
 
-  // router.push('/about')
+  router.push('/about')
 }
 
 const inputConf = {

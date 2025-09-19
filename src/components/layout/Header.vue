@@ -1,9 +1,7 @@
 <template>
   <div class="tool-bar">
-    <div class="tool-bar-title">
-      <div v-if="globalStore.$state.showProfileNameInHeader">
-        Dézsi Csaba - Junior Full-stack fejlesztő
-      </div>
+    <div v-if="globalStore.$state.showProfileNameInHeader">
+      Dézsi Csaba - Junior Full-stack fejlesztő
     </div>
 
     <div class="flex row flex-center">
@@ -66,9 +64,5 @@ const navBtnsConfig = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.tool-bar-title {
-  color: whitesmoke;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center column">
+  <q-page class="flex flex-center column" style="height: 100vh">
     <!-- Animated image or GIF -->
     <img
       src="imgs/illustrations/undraw_wip.svg"
@@ -21,8 +21,7 @@
 
     <q-btn
       class="q-mt-xl"
-      color="white"
-      text-color="blue"
+      color="primary"
       outline
       @click="takeBack"
       label="Vissza.."

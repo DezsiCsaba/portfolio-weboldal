@@ -1,8 +1,10 @@
+<!--TODO - grafika használata, h ne egy unalmas szövegekkel tűzdelt rész legyyen-->
+
 <template>
   <div class="container-div">
     <div
-      style="width: 75%"
-      class="q-pa-md"
+      :style="props.innerContainerStyles"
+      :class="props.innerContainerClasses"
     >
       <div class="text-uppercase text-h2">Rólam</div>
 
@@ -18,6 +20,8 @@
 </template>
 
 <script setup>
+const props = defineProps(['innerContainerClasses', 'innerContainerStyles'])
+
 const abtMeStrs = [
   'Középiskolában találkoztam először komolyabban az informatikával. Eleinte a videojátékok és kisebb programozási próbálkozások\n' +
   ' keltették fel az érdeklődésemet, ami végül az Óbudai Egyetem mérnökinformatikus szakára vezetett, ahol tovább\n' +

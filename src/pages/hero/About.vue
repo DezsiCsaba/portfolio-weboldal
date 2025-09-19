@@ -40,9 +40,15 @@
       </div>
     </div>
 
-    <AbtMe/>
+    <AbtMe
+      :inner-container-styles="innerContainerStyles"
+      :inner-container-classes="innerContainerClasses"
+    />
 
-
+    <MyInterests
+      :inner-container-styles="innerContainerStyles"
+      :inner-container-classes="innerContainerClasses"
+    />
   </q-page>
 </template>
 
@@ -57,6 +63,7 @@ defineOptions({
 import {computed, onMounted} from "vue";
 import {hideProfileHeader} from "src/utils/functions.js";
 import AbtMe from "components/hero/AbtMe.vue";
+import MyInterests from "components/hero/Interests.vue";
 
 onMounted(() => hideProfileHeader())
 
@@ -72,6 +79,11 @@ const wavePath = computed(() => generatePath({
   amplitude: 120,
   step: 2,
 }))
+
+const innerContainerStyles = computed(() => ({
+  width: '75%'
+}))
+const innerContainerClasses = computed(() => (['q-pa-md']))
 
 const abtMeShort = [
   'Középiskolában kezdődött az informatika iránti érdeklődésem, amely az Óbudai Egyetemen és szakmai tapasztalataimon\n' +
