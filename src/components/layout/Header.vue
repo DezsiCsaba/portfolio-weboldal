@@ -1,7 +1,9 @@
 <template>
   <div class="tool-bar">
-    <div v-if="globalStore.$state.showProfileNameInHeader">
-      Dézsi Csaba - Junior Full-stack fejlesztő
+    <div>
+      <div v-if="globalStore.$state.showProfileNameInHeader">
+        Dézsi Csaba - Junior Full-stack fejlesztő
+      </div>
     </div>
 
     <div class="flex row flex-center">
