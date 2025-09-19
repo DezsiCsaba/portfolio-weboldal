@@ -1,7 +1,8 @@
 import {onMounted, onUnmounted, ref} from "vue";
 import {useGlobalStore} from "stores/globalStore.js";
+import dayjs from "dayjs";
 
-const isLog = false
+const isLog = true
 const globalStore = useGlobalStore()
 
 export async function sleep(ms = 1000) {
@@ -67,4 +68,8 @@ export function showProfileHeader() {
 
 export function hideProfileHeader() {
   globalStore.$state.showProfileNameInHeader = false
+}
+
+export function formatDate(date = new Date(), format = 'YYYY-MMM-DD') {
+  return dayjs(date).format(format)
 }

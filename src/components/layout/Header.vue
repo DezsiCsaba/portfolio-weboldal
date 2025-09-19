@@ -49,11 +49,11 @@ const navBtnsConfig = [
     label: 'Tanulmányok',
     link: '/edu'
   }, {
-    label: 'Munkatapasztalat',
-    link: '/work'
-  }, {
     label: 'Rólam',
     link: '/about'
+  }, {
+    label: 'Pályafutásom',
+    link: '/projects'
   }
 ]
 </script>
