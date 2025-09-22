@@ -1,5 +1,8 @@
 <template>
  <q-layout view="lHh Lpr lff">
+   <autumn-bg/>
+<!--   TODO - toggle on/off for themed bg-->
+
    <q-header
      class="custom-header"
      :class="{ 'scrolled-header': scrolled }"
@@ -14,7 +17,7 @@
      />
    </q-header>
 
-   <q-footer v-if="isPastLandingPage(router)">
+   <q-footer class="custom-footer" v-if="isPastLandingPage(router)">
      <CustomFooter/>
    </q-footer>
 
@@ -33,6 +36,7 @@ import {useRouter} from "vue-router";
 import CustomFooter from "components/layout/Footer.vue";
 import CustomHeader from "components/layout/Header.vue";
 import {onMounted, onUnmounted, ref} from "vue";
+import AutumnBg from "components/layout/autumnBg.vue";
 
 const router = useRouter()
 // const { scrollY } = useScroll()
@@ -74,5 +78,9 @@ onUnmounted(() => {
   color: $primary-text-custom;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
+//.custom-footer, custom-header {
+//  z-index: $z-idx-layout-el;
+//}
 </style>
 

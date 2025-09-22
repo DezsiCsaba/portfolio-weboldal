@@ -96,6 +96,7 @@ const abtMeShort = [
 
 
 <style lang="scss" scoped>
+@import '../../css/app';
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -112,7 +113,7 @@ const abtMeShort = [
   overflow: hidden;
 
   svg {
-    z-index: 100;
+    z-index: $z-idx-cover-img;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -123,7 +124,7 @@ const abtMeShort = [
 
 .hero-content-container {
   position: absolute;
-  z-index: 100;
+  z-index: $z-idx-page-header;
   color: white;
 
   width: 100%;

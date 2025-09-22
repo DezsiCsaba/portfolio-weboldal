@@ -1,6 +1,6 @@
 @import './app.scss';
 @import './quasar-variables';
-@import './styling';
+@import 'bg-styling';
 
 // font related stuff
 .rubik-ds {
@@ -15,19 +15,6 @@
 .page-bg {
   background-color: antiquewhite;
   color: $text-col-on-bg;
-}
-
-.navy-card {
-  z-index: 2;
-  background: var(--navy-on-dark);
-  box-shadow: 0 10px 10px -10px var(--navy-shadow);
-  border: 1px solid transparent;
-
-  border-bottom-right-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-  color: var(--text-col-on-bg);
-
-  height: 100%;
 }
 
 .container-div {
@@ -86,6 +73,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: $z-idx-bg;
   //background: $primary-bg-gradient;
 }

@@ -1,17 +1,17 @@
 <template>
   <q-page class="flex flex-center">
     <div
-      class="login-bg"
       :style="loginBg"
+      class="login-bg"
     >
       <div class="img-overlay dark-bg-gradient-strong"/>
     </div>
 
-    <q-form class="login-form">
+    <q-form class="login-form" ref="form">
       <q-card
         flat
         style="width: 500px"
-        class="login-card q-pa-md"
+        class="glass q-pa-md"
       >
         <div class="text-uppercase flex flex-center" style="font-size: clamp(20px, 8vw, 40px)">Ki vagyok?</div>
 
@@ -19,11 +19,13 @@
           <q-input
             :model-value="uname"
             v-bind="inputConf"
+            ref="unameInput"
             label="Felhasználónév"
           ></q-input>
           <q-input
             :model-value="pword"
             v-bind="inputConf"
+            ref="pwInput"
             label="Jelszó"
             :type="isPwdToggled ? 'password' : 'text'"
           >
@@ -59,7 +61,12 @@ import {useRouter} from "vue-router";
 const uname = ref('')
 const pword = ref('')
 const isPwdToggled = ref(true)
+
+//component refs
 const loginBtn = ref(null)
+const unameInput = ref(null)
+const pwInput = ref(null)
+const form = ref(null)
 
 const router = useRouter()
 
@@ -83,16 +90,19 @@ const inputConf = {
 }
 
 const loginBg = computed(() => ({
-  backgroundImage: 'url(imgs/workstation.jpg)',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat'
+  // TODO - add css background using svg's and maybe even animations
+  // backgroundImage: 'url(imgs/workstation.jpg)',
+  // backgroundSize: 'cover',
+  // backgroundPosition: 'center',
+  // backgroundRepeat: 'no-repeat'
 }))
 
 const doFakeLogin = async () => {
   await sleep(1000)
+  unameInput.value.focus()
   await autoType(uname, 'Dézsi Csaba István')
   await sleep()
+  pwInput.value.focus()
   await autoType(pword, 'Junior full-stack fejlesztő')
   await sleep(150)
   isPwdToggled.value = false
@@ -106,7 +116,8 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/styling';
+@import '../../css/bg-styling';
+@import '../../css/app';
 
 .login-bg {
   position: absolute;
@@ -116,7 +127,7 @@ onMounted(async () => {
 }
 
 .login-form {
-  z-index: 100;
+  z-index: $z-idx-content;
   color: white;
 }
 

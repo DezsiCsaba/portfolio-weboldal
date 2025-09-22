@@ -2,7 +2,7 @@
   <div class="tool-bar">
     <div>
       <div v-if="globalStore.$state.showProfileNameInHeader">
-        Dézsi Csaba - Junior Full-stack fejlesztő
+        Dézsi Csaba
       </div>
     </div>
 

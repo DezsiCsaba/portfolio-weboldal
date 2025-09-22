@@ -40,7 +40,7 @@ const bgStyle = computed(() => ({
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/styling';
+@import '../../css/bg-styling';
 @import '../../css/classes';
 
 .custom-footer {
@@ -55,12 +55,12 @@ const bgStyle = computed(() => ({
   left: 0;
   width: 100%;
   height: 50px;         /* wave height */
-  background: white;    /* same as next section background */
+  background: white;    /* TODO - ezt dinamikusra megoldani */
 
   /* top edge curve */
   border-bottom-left-radius: 50% 60px;
   border-bottom-right-radius: 50% 60px;
-  z-index: 10;
+  z-index: $z-idx-layout-el;
 }
 
 //.img-overlay {
@@ -84,7 +84,7 @@ const bgStyle = computed(() => ({
   height: 100%;
 
   position: absolute;
-  z-index: 20;
+  z-index: $z-idx-layout-el;
   padding: 10vh 10vw 10vh 10vw;
 
   display: flex;

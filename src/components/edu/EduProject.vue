@@ -6,7 +6,7 @@
           class="project-card-header"
           :style="headerStyle"
         >
-          <div class="img-overlay primary-bg-gradient-strong" style="z-index: 1"/>
+          <div class="img-overlay primary-bg-gradient-strong"/>
         </div>
 
         <div style="height: 60%" class="flex-spacing q-px-md q-pb-md">
@@ -25,7 +25,7 @@
       </q-card>
 
 
-      <div class="project-techs">
+      <div class="project-techs glass">
         <div :class="chipContainerClasses">
 <!--          <div>Szerepeim</div>-->
           <ChipLink
@@ -76,13 +76,13 @@ const takeToProject = () => {
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/styling';
+@import '../../css/bg-styling';
 
 .project-card {
   width: 300px;
   height: 400px;
 
-  z-index: 5;
+  z-index: $z-idx-containers;
   grid-area: 1 / 6 / 2 / 1;
 }
 
@@ -112,7 +112,7 @@ const takeToProject = () => {
   height: 0;
   border-right: 300px solid transparent; /* span full width */
   border-bottom: 30px solid white;      /* slope height and color */
-  z-index: 2;
+  z-index: $z-idx-containers;
 }
 
 .project-grid{
@@ -127,9 +127,9 @@ const takeToProject = () => {
 .project-techs {
   min-height: 100px;
 
-  z-index: 10;
+  z-index: $z-idx-containers + 1;
   grid-area: 1 / 4 / -1 / -1;
-  background: $dark-bg-gradient-strong;
+  //background: $dark-bg-gradient-strong;
   border-radius: var(--border-radius);
 }
 </style>

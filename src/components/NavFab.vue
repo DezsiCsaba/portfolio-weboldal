@@ -41,7 +41,9 @@ function navigate(link) {
 
 </script>
 
-<style>
+<style lang="scss">
+@import '../css/app';
+
 .sticky-nav {
   position: fixed;
   bottom: 1rem;
@@ -50,7 +52,7 @@ function navigate(link) {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.5rem;
-  z-index: 1000;
+  z-index: $z-idx-on-top-of-everything;
 }
 
 .sub-btn {

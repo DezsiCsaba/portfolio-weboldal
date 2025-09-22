@@ -56,4 +56,27 @@ $border-radius: var(--border-radius);
 $font-size-small: var(--font-size-small);
 
 
+
+// ---------- Z-INDEX CONFIGURATIONS ----------
+// 100+ : top-most interactive elements
+$z-idx-on-top-of-everything: 1000;
+$z-idx-modal: 120;
+$z-idx-tooltip: 110;
+$z-idx-noties: 105;
+
+// 80-99 : layout and global UI
+$z-idx-layout-el: 21;
+$z-idx-page-header: 21;
+
+// 50-79 : page content and visuals
+$z-idx-cover-img: 48;
+$z-idx-content: 50;
+$z-idx-anim: 45;
+
+// 0-49 : background / structural layers
+$z-idx-bg: 20;               // background elements (gradients, bg images)
+$z-idx-containers: 0;        // base wrapper / structural containers
+
+//<style lang="scss">
+//@import '../css/app';
 /* app global css */

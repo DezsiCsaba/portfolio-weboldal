@@ -20,7 +20,7 @@ export default defineConfig((/* ctx */) => {
       'app.scss',
       'classes.scss',
       'transitions.scss',
-      'styling.scss'
+      'bg-styling.scss'
     ],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras

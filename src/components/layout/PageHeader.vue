@@ -5,13 +5,16 @@
   >
     <div class="img-overlay medium-bg-gradient-strong"/>
 
-    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path
-        :d="wavePath"
-        fill="#ffff"
-        fill-opacity="1"
-      ></path>
-    </svg>
+    <div v-if="conf.showWaves">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path
+          :d="wavePath"
+          fill="#ffff"
+          fill-opacity="1"
+        ></path>
+      </svg>
+    </div>
+
 
     <div class="header-content q-pl-xl">
       <div class="header-inner-content header-inner-content-l">
@@ -37,14 +40,15 @@
 import {computed, reactive} from "vue";
 import {generatePath, getPathGenDefaultConf} from "src/utils/pathGenerator.js";
 
-const props = defineProps(['title', 'icon', 'imgSrc', 'subtitle', 'secondaryImgSrc'])
+const props = defineProps(['title', 'icon', 'imgSrc', 'subtitle', 'secondaryImgSrc', 'showWaves'])
 
 const conf = reactive({
   title: props.title || '',
   icon: props.icon || '',
   imgSrc: props.imgSrc || '',
   secondaryImgSrc: props.secondaryImgSrc || 'imgs/illustrations/undraw_programming.svg',
-  subtitle: props.subtitle || ''
+  subtitle: props.subtitle || '',
+  showWaves: props.showWaves ?? true
 })
 
 const bgStyle = computed(() => ({
@@ -63,7 +67,7 @@ const wavePath = computed(() => generatePath({
 </script>
 
 <style lang="scss" scoped>
-@import '../../css/styling';
+@import '../../css/bg-styling';
 
 .custom-header {
   width: 100%;
@@ -76,7 +80,7 @@ const wavePath = computed(() => generatePath({
   position: relative;
 
   svg {
-    z-index: 100;
+    z-index: $z-idx-page-header;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -88,7 +92,7 @@ const wavePath = computed(() => generatePath({
 
 
 .header-content {
-  z-index: 100;
+  z-index: $z-idx-on-top-of-everything;
   position: absolute;
   color: white;
 
